@@ -7,3 +7,6 @@ applications:
   memory: 512M
   timeout: 180
   buildpack: sdk-for-nodejs
+  services:
+  - Cloudant NoSQL DB-98
+  
