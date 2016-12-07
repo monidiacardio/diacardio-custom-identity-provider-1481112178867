@@ -1,0 +1,9 @@
+applications:
+- disk_quota: 512M
+  host: diacardio-custom-identity-provider
+  name: diacardio-custom-identity-provider
+  command: node .
+  instances: 1
+  memory: 512M
+  timeout: 180
+  buildpack: sdk-for-nodejs
