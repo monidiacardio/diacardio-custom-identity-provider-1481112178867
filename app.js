@@ -2,6 +2,7 @@ var express = require('express');
 var cfenv = require('cfenv');
 var log4js = require('log4js');
 var jsonParser = require('body-parser').json();
+var Cloudant = require('cloudant');
 
 // Using hardcoded user repository
 /*var userRepository = {
