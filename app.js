@@ -39,7 +39,7 @@ var cloudant = Cloudant({url: cloudant_url});
 var db = cloudant.db.use('diacardio_users');
 
 app.post('/addUsers', function(req, res){
-	var update_obj = {"_id": "john.lennon", "password": "12345" };
+	var update_obj = {"_id": "john.lennon", "password": "12345", "displayName": "John Lennon", "dob": "October 9, 1940" };
 	db.insert(update_obj, function(err, data){
 		if (err) {
 			console.err('an error has occured');
@@ -78,6 +78,9 @@ app.post('/apps/:tenantId/:realmName/handleChallengeAnswer', jsonParser, functio
 	var password = req.body.challengeAnswer["password"];
 
 	var responseJson = { status: "failure" };
+
+	console.log('username entered:' + username);
+	console.log('password entered:' + password);
 
 	db.get(username, function(err, userObject){
 		if(!err) {
