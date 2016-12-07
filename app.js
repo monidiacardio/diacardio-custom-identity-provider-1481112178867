@@ -42,7 +42,7 @@ app.post('/addUsers', function(req, res){
 	var update_obj = {"_id": "john.lennon", "password": "12345", "displayName": "John Lennon", "dob": "October 9, 1940" };
 	db.insert(update_obj, function(err, data){
 		if (err) {
-			console.err('an error has occured');
+			console.log('an error has occured');
 		} else {
 			console.log('inserted successfully');
 		}
